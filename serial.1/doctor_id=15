@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1877F2">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- Overlay -->
+<div class="nav-overlay" id="navOverlay" onclick="closeDrawer()"></div>
+
+<!-- Side Drawer -->
+<div class="side-drawer" id="sideDrawer">
+  <div class="drawer-header">
+    <div class="dh-name">👤 Rana</div>
+    <div class="dh-role">user</div>
+  </div>
+  <div class="drawer-nav">
+          <a href="index.php"
+         class="">
+        <span class="nav-icon">🔹</span>
+        Home      </a>
+          <a href="doctor_serials_fill.php"
+         class="">
+        <span class="nav-icon">🔹</span>
+        Update/Fill Serials      </a>
+          <a href="doctor_serials.php"
+         class="active">
+        <span class="nav-icon">🔹</span>
+        Print      </a>
+          <a href="features.php"
+         class="">
+        <span class="nav-icon">🔹</span>
+        Features      </a>
+          <a href="p1_doctor.php"
+         class="">
+        <span class="nav-icon">🔹</span>
+        সিরিয়াল দিন      </a>
+        <div class="drawer-divider"></div>
+    <a href="logout.php" style="color:#dc3545;">
+      <span class="nav-icon">🚪</span> লগআউট
+    </a>
+  </div>
+</div>
+
+<!-- Top Navbar -->
+<nav class="navbar">
+  <span class="hamburger" onclick="openDrawer()">☰</span>
+  <div class="nav-brand">
+    🏥 সিরিয়াল সিস্টেম
+  </div>
+  <div class="user-dropdown" id="userDropdown">
+    <div class="user-btn" onclick="toggleDropdown()">
+      👤 Rana ▾
+    </div>
+    <div class="dropdown-menu">
+      <a href="settings.php"><i class="bi bi-gear"></i> সেটিংস</a>
+      <a href="logout.php" class="logout"><i class="bi bi-box-arrow-right"></i> লগআউট</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+function openDrawer(){
+  document.getElementById('sideDrawer').classList.add('show');
+  document.getElementById('navOverlay').classList.add('show');
+}
+function closeDrawer(){
+  document.getElementById('sideDrawer').classList.remove('show');
+  document.getElementById('navOverlay').classList.remove('show');
+}
+function toggleDropdown(){
+  document.getElementById('userDropdown').classList.toggle('active');
+}
+document.addEventListener('click', function(e){
+  let dd = document.getElementById('userDropdown');
+  if(dd && !dd.contains(e.target)) dd.classList.remove('active');
+});
+</script>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<title>Asst. Prof. Dr. Abul Kasem (29 Jun 2026)</title>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="d-flex justify-content-between">
+        <a href="doctor_serials.php" class="btn btn-secondary back-btn">⬅️ সব ডাক্তারের তালিকা</a>
+        <button class="btn btn-success print-btn"
+                onclick="window.open('print_serials.php?doctor_id=15&date=2026-06-29', '_blank')">
+            🖨️ Print
+        </button>
+    </div>
+
+    <h3 class="text-center mb-1">Asst. Prof. Dr. Abul Kasem</h3>
+    <p class="text-center mb-2">
+        <span class="badge bg-info text-dark date-badge">29 Jun 2026, Monday</span>
+    </p>
+
+    <div class="nav-btns mb-3">
+                <a class="btn btn-outline-primary" href="doctor_serials.php?doctor_id=14&date=2026-06-29">⬅️ Dr. Omar Farooque</a>
+                <a class="btn btn-outline-primary" href="doctor_serials.php?doctor_id=15&date=2026-06-28">⬅️ Previous Day</a>
+        <a class="btn btn-outline-primary" href="doctor_serials.php?doctor_id=15&date=2026-06-30">Next Day ➡️</a>
+                <a class="btn btn-outline-primary" href="doctor_serials.php?doctor_id=18&date=2026-06-29">Dr. Khairun Nessa ➡️</a>
+            </div>
+
+    <table class="table table-bordered table-striped mt-3">
+        <thead class="table-light">
+            <tr>
+                <th>Serial No</th>
+                <th>Patient Name</th>
+                <th>Mobile</th>
+                <th>Added / Filled By</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td>1</td>
+                <td>Abdus Samad</td>
+                <td>01722808002</td>
+                <td>Shirin2</td>
+                <td>29 Jun, 02:08 AM</td>
+            </tr>
+                    <tr>
+                <td>2</td>
+                <td>রুমেনা</td>
+                <td>01753119980</td>
+                <td>Shimul</td>
+                <td>29 Jun, 02:12 AM</td>
+            </tr>
+                    <tr>
+                <td>3</td>
+                <td>Rafiya</td>
+                <td>01756559048</td>
+                <td>hridoy</td>
+                <td>29 Jun, 04:02 AM</td>
+            </tr>
+                    <tr>
+                <td>4</td>
+                <td>Anaf</td>
+                <td>01720263967</td>
+                <td>Rana</td>
+                <td>29 Jun, 02:52 AM</td>
+            </tr>
+                    <tr>
+                <td>5</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>6</td>
+                <td>Baby of Sabila</td>
+                <td>01784876401</td>
+                <td>Shirin2</td>
+                <td>29 Jun, 03:37 AM</td>
+            </tr>
+                    <tr>
+                <td>7</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>8</td>
+                <td>Sabid</td>
+                <td>01782432257</td>
+                <td>Shirin2</td>
+                <td>29 Jun, 04:14 AM</td>
+            </tr>
+                    <tr>
+                <td>9</td>
+                <td>Tanisha</td>
+                <td>01700000000</td>
+                <td>Tisha</td>
+                <td>29 Jun, 01:39 PM</td>
+            </tr>
+                    <tr>
+                <td>10</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>11</td>
+                <td>Nafisa</td>
+                <td>01700000000</td>
+                <td>Romjan</td>
+                <td>29 Jun, 01:40 PM</td>
+            </tr>
+                    <tr>
+                <td>12</td>
+                <td>Takbir</td>
+                <td>01717361238</td>
+                <td>Takbir</td>
+                <td>29 Jun, 02:32 PM</td>
+            </tr>
+                    <tr>
+                <td>13</td>
+                <td>Romjan</td>
+                <td>01700000000</td>
+                <td>Saifur</td>
+                <td>29 Jun, 03:00 PM</td>
+            </tr>
+                    <tr>
+                <td>14</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>15</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>16</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>17</td>
+                <td>Soft Test</td>
+                <td>01700000000</td>
+                <td>Saifur</td>
+                <td>29 Jun, 03:42 PM</td>
+            </tr>
+                    <tr>
+                <td>18</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>19</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>20</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>21</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>22</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>23</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>24</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                    <tr>
+                <td>25</td>
+                <td>-</td>
+                <td>-</td>
+                <td></td>
+                <td>-</td>
+            </tr>
+                </tbody>
+    </table>
+</div>
+</body>
+</html>
